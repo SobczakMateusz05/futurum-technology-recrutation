@@ -6,6 +6,7 @@
     gap: 15px;
     cursor: pointer;
     position: relative;
+    -webkit-tap-highlight-color: transparent;
 
     &:hover .popUpContainer {
         opacity: 1;
@@ -44,7 +45,7 @@
     @include mixins.flex-container(column, center, flex-start);
     gap: 10px;
     position: absolute;
-    top: 100%;
+    top: 101%;
     padding: 10px 15px;
     background: vars.$clr-bg-secondary;
     border-radius: 15px;
@@ -56,6 +57,10 @@
     &:hover {
         opacity: 1;
         pointer-events: auto;
+    }
+
+    @media (max-width: 767px) {
+        top: 106%;
     }
 }
 
