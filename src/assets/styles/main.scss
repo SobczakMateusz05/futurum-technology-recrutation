@@ -1,0 +1,16 @@
+@use "./variables" as vars;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    background-color: vars.$clr-bg-primary;
+}

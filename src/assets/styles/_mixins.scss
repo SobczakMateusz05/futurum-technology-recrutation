@@ -1,0 +1,27 @@
+@mixin flex-container($direction, $justify, $algin) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $algin;
+}
+
+@mixin h1-font {
+    font-size: 4.05rem;
+    line-height: normal;
+    letter-spacing: 0.081rem;
+    font-family: "Roboto", sans-serif;
+}
+
+@mixin p-font {
+    font-size: 1rem;
+    line-height: normal;
+    letter-spacing: 0.063rem;
+    font-family: "Outfit", sans-serif;
+}
+
+@mixin sm-font {
+    font-size: 0.875rem;
+    line-height: normal;
+    letter-spacing: 0.063rem;
+    font-family: "Outfit", sans-serif;
+}
