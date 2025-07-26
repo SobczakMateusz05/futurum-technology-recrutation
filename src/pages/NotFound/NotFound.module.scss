@@ -1,0 +1,43 @@
+@use "../../assets/styles/_mixins.scss" as mixins;
+@use "../../assets/styles/_variables.scss" as vars;
+
+.container {
+    @include mixins.flex-container(column, center, center);
+    gap: 10px;
+    height: 100%;
+}
+
+.title {
+    @include mixins.h1-font;
+    color: vars.$clr-txt-primary;
+}
+
+.message {
+    @include mixins.p-font;
+    color: vars.$clr-txt-primary;
+}
+
+.link {
+    @include mixins.p-font;
+    color: vars.$clr-txt-primary;
+    text-underline-offset: 0.3rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: vars.$clr-link-hover;
+    }
+}
+
+.icon {
+    margin-top: 25px;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
