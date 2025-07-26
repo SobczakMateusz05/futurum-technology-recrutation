@@ -1,0 +1,22 @@
+@use "../../assets/styles/_mixins.scss" as mixins;
+@use "../../assets/styles/_variables.scss" as vars;
+
+.container {
+    @include mixins.flex-container(row, space-between, center);
+    padding: 25px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+.rightSideContainer {
+    @include mixins.flex-container(row, center, stretch);
+    gap: 20px;
+}
+
+.breakLine {
+    width: 1px;
+    background: vars.$clr-txt-secondary;
+}

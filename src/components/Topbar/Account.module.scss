@@ -1,0 +1,78 @@
+@use "../../assets/styles/_mixins.scss" as mixins;
+@use "../../assets/styles/_variables.scss" as vars;
+
+.container {
+    @include mixins.flex-container(row, center, center);
+    gap: 15px;
+    cursor: pointer;
+    position: relative;
+
+    &:hover .popUpContainer {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+.iconContainer {
+    @include mixins.flex-container(row, center, center);
+    background: vars.$clr-bg-secondary;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: vars.$eff-shadow-primary;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.infoContainer {
+    @include mixins.flex-container(column, center, flex-start);
+}
+
+.userName {
+    @include mixins.p-font;
+}
+
+.userType {
+    @include mixins.sm-font;
+    color: vars.$clr-txt-secondary;
+}
+
+.popUpContainer {
+    @include mixins.flex-container(column, center, flex-start);
+    gap: 10px;
+    position: absolute;
+    top: 100%;
+    padding: 10px 15px;
+    background: vars.$clr-bg-secondary;
+    border-radius: 15px;
+    box-shadow: vars.$eff-shadow-primary;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+.option {
+    @include mixins.flex-container(row, center, center);
+    gap: 10px;
+    @include mixins.p-font;
+    color: vars.$clr-txt-primary;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        color: vars.$clr-link-hover;
+    }
+}
+
+.optionIcon {
+    width: 18px;
+    height: 18px;
+}

@@ -1,0 +1,22 @@
+@use "../../assets/styles/_mixins.scss" as mixins;
+@use "../../assets/styles/_variables.scss" as vars;
+
+.container {
+    @include mixins.flex-container(row, center, center);
+    gap: 15px;
+    border-radius: 15px;
+    background: vars.$clr-bg-secondary;
+    box-shadow: vars.$eff-shadow-primary;
+    padding: 10px 20px;
+    max-height: 50px;
+}
+
+.icon {
+    height: 40px;
+    width: auto;
+}
+
+.balance {
+    @include mixins.p-font;
+    color: vars.$clr-txt-primary;
+}
