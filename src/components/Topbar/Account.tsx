@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import style from "./Account.module.scss";
 import PersonIcon from "../../assets/person.svg";
 import SettingsIcon from "../../assets/settings.svg";
@@ -20,7 +21,7 @@ function Account() {
                 <p className={style.userType}>{userData.type}</p>
             </div>
             <div className={style.popUpContainer}>
-                <a href="#" className={style.option}>
+                <Link to="/settings" className={style.option}>
                     <img
                         src={SettingsIcon}
                         alt="Settings Icon"
@@ -28,8 +29,11 @@ function Account() {
                     />
                     Settings
                     {/* It's just for demonstation purposes with backend it would work */}
-                </a>
-                <a href="#" className={style.option}>
+                </Link>
+                <button
+                    className={style.option}
+                    onClick={() => alert("Logged out")}
+                >
                     <img
                         src={LogoutIcon}
                         alt="Logout Icon"
@@ -37,7 +41,7 @@ function Account() {
                     />
                     Logout
                     {/* It's just for demonstation purposes with backend it would work */}
-                </a>
+                </button>
             </div>
         </div>
     );
