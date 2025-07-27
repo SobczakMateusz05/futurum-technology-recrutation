@@ -11,6 +11,16 @@ function NotFound() {
             </a>
             <img src={ReactIcon} alt="React Icon" className={style.icon} />
             {/* It's for demonstration in real app this logo will be changed with real app logo */}
+            {/* This br and p won't exist in a real app */}
+            <br />
+            <p className={style.message}>
+                Some buttons are created more like placeholders to good looking
+                of app.
+            </p>
+            <p className={style.message}>
+                The would work normally in a real application with backend
+                integration.
+            </p>
         </div>
     );
 }
