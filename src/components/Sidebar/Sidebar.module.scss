@@ -1,0 +1,57 @@
+@use "../../assets/styles/_mixins.scss" as mixins;
+@use "../../assets/styles/_variables.scss" as vars;
+
+.container {
+    @include mixins.flex-container(column, center, flex-start);
+    width: 10%;
+    padding: 0 25px;
+    min-width: 152px;
+    max-width: 166px;
+}
+
+.nav {
+    width: 100%;
+}
+
+.navList {
+    @include mixins.flex-container(column, center, flex-start);
+    gap: 10px;
+    list-style: none;
+    width: 100%;
+}
+
+.navItem {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+}
+
+.link {
+    @include mixins.flex-container(row, flex-start, center);
+    gap: 10px;
+    @include mixins.p-font;
+    padding: 10px 0 10px 20px;
+    border-radius: 15px;
+    width: 100%;
+    text-decoration: none;
+    color: vars.$clr-txt-secondary;
+    transition: vars.$eff-transition;
+
+    &:hover {
+        background: vars.$clr-bg-secondary;
+        box-shadow: vars.$eff-shadow-primary;
+        color: vars.$clr-accent;
+        font-weight: 600;
+    }
+
+    &:hover .icon {
+        fill: vars.$clr-accent;
+    }
+}
+
+.icon {
+    fill: vars.$clr-txt-secondary;
+    width: 20px;
+    height: 20px;
+    transition: vars.$eff-transition;
+}
