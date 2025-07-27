@@ -52,7 +52,7 @@
     box-shadow: vars.$eff-shadow-primary;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: vars.$eff-transition;
 
     &:hover {
         opacity: 1;
@@ -71,6 +71,8 @@
     color: vars.$clr-txt-primary;
     cursor: pointer;
     text-decoration: none;
+    background: transparent;
+    border: none;
 
     &:hover {
         color: vars.$clr-link-hover;

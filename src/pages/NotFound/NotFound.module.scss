@@ -5,6 +5,7 @@
     @include mixins.flex-container(column, center, center);
     gap: 10px;
     height: 100%;
+    width: 100%;
 }
 
 .title {
@@ -21,7 +22,7 @@
     @include mixins.p-font;
     color: vars.$clr-txt-primary;
     text-underline-offset: 0.3rem;
-    transition: all 0.3s ease;
+    transition: vars.$eff-transition;
 
     &:hover {
         color: vars.$clr-link-hover;
