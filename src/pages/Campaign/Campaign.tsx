@@ -1,5 +1,5 @@
-function Dashboard() {
+function Campaign() {
     return <div>Campaign</div>;
 }
 
-export default Dashboard;
+export default Campaign;
