@@ -1,6 +1,7 @@
 import style from "./Campaign.module.scss";
 import Filter from "../../components/SearchFilters/Filter";
 import Search from "../../components/SearchFilters/Search";
+import CampaignToolbar from "../../components/CampaignToolbar/CampaignToolbar";
 
 function Campaign() {
     return (
@@ -9,7 +10,9 @@ function Campaign() {
                 <Filter />
                 <Search />
             </div>
-            <div className={style.content}>Content</div>
+            <div className={style.content}>
+                <CampaignToolbar />
+            </div>
         </div>
     );
 }

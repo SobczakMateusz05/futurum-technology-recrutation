@@ -16,5 +16,9 @@
 .content {
     @include mixins.flex-container(column, center, flex-start);
     width: 100%;
-    background: lightblue;
+    max-width: 100%;
+    background: vars.$clr-bg-secondary;
+    box-shadow: vars.$clr-bg-secondary;
+    border-radius: vars.$spc-15;
+    padding: vars.$spc-15;
 }
