@@ -4,6 +4,7 @@
 .container {
     @include mixins.flex-container(row, space-between, center);
     padding: vars.$spc-25;
+    width: 100%;
 }
 
 .icon {
