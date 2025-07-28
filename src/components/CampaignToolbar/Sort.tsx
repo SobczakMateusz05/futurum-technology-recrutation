@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
-import useClickOutside from "../../assets/hooks/useClickOutside";
+import useClickOutside from "../../hooks/useClickOutside";
 import type { SortType } from "../../assets/types/CampaignToolbar";
 import style from "./Sort.module.scss";
 import Dropdown from "../SearchFilters/Dropdown";

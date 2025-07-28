@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import style from "./Filter.module.scss";
 import type { FilterType } from "../../assets/types/SearchFilters";
 import Dropdown from "./Dropdown";
-import useClickOutside from "../../assets/hooks/useClickOutside";
+import useClickOutside from "../../hooks/useClickOutside";
 
 import { FilterIcon, ArrowIcon } from "../../assets/ComponentIcons";
 
