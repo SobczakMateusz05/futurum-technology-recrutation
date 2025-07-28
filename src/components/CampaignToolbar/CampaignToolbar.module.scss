@@ -4,6 +4,8 @@
 .container {
     @include mixins.flex-container(row, space-between, center);
     width: 100%;
+    padding: vars.$spc-15;
+    padding-bottom: 0;
 }
 
 .left {
