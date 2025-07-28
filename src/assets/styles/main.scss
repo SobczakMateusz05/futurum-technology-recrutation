@@ -20,7 +20,7 @@ body {
 main {
     @include mixins.flex-container(row, flex-start, flex-start);
     width: 100%;
-    padding: 25px 0;
+    padding: vars.$spc-25 0;
 }
 
 a.active {
@@ -29,7 +29,7 @@ a.active {
     color: vars.$clr-accent;
     font-weight: 600;
 
-    & .icon {
+    & .navIcon {
         fill: vars.$clr-accent;
     }
 }
