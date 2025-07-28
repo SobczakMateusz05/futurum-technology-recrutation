@@ -1,0 +1,83 @@
+@use "../../assets/styles/mixins" as mixins;
+@use "../../assets/styles/variables" as vars;
+
+.container {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.headerContainer {
+    position: sticky;
+    top: 0;
+    background: vars.$clr-bg-accent;
+}
+
+.header {
+    @include mixins.ssm-font;
+    font-weight: 400;
+    color: vars.$clr-txt-accent;
+    text-align: start;
+    padding: 5px;
+}
+
+.rowContainer {
+    border-bottom: 1px solid vars.$clr-bg-accent;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.field {
+    @include mixins.p-font;
+    font-weight: 400;
+    color: vars.$clr-txt-primary;
+    text-align: start;
+    padding: 15px 5px;
+    max-height: 70px;
+    max-width: 150px;
+}
+
+.keyword {
+    display: inline;
+}
+
+.field,
+.header {
+    &:first-child {
+        padding-left: 20px;
+    }
+
+    &:last-child {
+        padding-right: 20px;
+    }
+}
+
+.field:last-child {
+    @include mixins.flex-container(row, flex-start, center);
+    gap: vars.$spc-15;
+}
+
+.button {
+    background: none;
+    border: none;
+    box-shadow: vars.$eff-shadow-primary;
+    border-radius: vars.$spc-10;
+    padding: 7px;
+    cursor: pointer;
+
+    &:hover .icon {
+        fill: vars.$clr-accent;
+    }
+
+    &:last-child:hover .icon {
+        fill: red;
+    }
+}
+
+.icon {
+    fill: vars.$clr-txt-primary;
+    width: 20px;
+    height: 20px;
+    transition: vars.$eff-transition;
+}
