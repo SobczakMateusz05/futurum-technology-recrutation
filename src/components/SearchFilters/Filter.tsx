@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import style from "./Filter.module.scss";
 import type { FilterType } from "../../assets/types/SearchFilters";
@@ -15,6 +15,7 @@ function Filter() {
             : filterTypes[0]
     );
     const [isOpen, setIsOpen] = useState(false);
+    const containerRef = useRef<HTMLDivElement>(null);
 
     const handleFilter = (type: FilterType) => {
         if (type !== "all") {
@@ -28,8 +29,29 @@ function Filter() {
         setIsOpen(false);
     };
 
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                containerRef.current &&
+                !containerRef.current.contains(event.target as Node)
+            ) {
+                setIsOpen(false);
+            }
+        };
+
+        const controler = new AbortController();
+
+        window.addEventListener("click", handleClickOutside, {
+            signal: controler.signal,
+        });
+
+        return () => {
+            controler.abort();
+        };
+    }, []);
+
     return (
-        <div className={style.container}>
+        <div ref={containerRef} className={style.container}>
             <button className={style.button} onClick={() => setIsOpen(!isOpen)}>
                 <FilterIcon className={style.filterIcon} />
                 <p className={style.text}>
