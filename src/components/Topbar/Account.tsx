@@ -8,6 +8,11 @@ import LogoutIcon from "../../assets/icons/logout.svg";
 import { userData } from "../../assets/data"; //This import is only for demonstration.
 
 function Account() {
+    const handleLogout = () => {
+        // Backed logic to handle logout
+        alert("Logged out"); // Only for demonstration
+    };
+
     return (
         <div className={style.container}>
             <div className={style.iconContainer}>
@@ -32,10 +37,7 @@ function Account() {
                     Settings
                     {/* It's just for demonstation purposes with backend it would work */}
                 </Link>
-                <button
-                    className={style.option}
-                    onClick={() => alert("Logged out")}
-                >
+                <button className={style.option} onClick={handleLogout}>
                     <img
                         src={LogoutIcon}
                         alt="Logout Icon"
