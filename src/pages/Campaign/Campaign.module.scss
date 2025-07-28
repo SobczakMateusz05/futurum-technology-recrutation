@@ -1,0 +1,20 @@
+@use "../../assets/styles/mixins" as mixins;
+@use "../../assets/styles/variables" as vars;
+
+.container {
+    @include mixins.flex-container(column, flex-start, flex-start);
+    gap: vars.$spc-15;
+    padding: 0 vars.$spc-25;
+    width: 100%;
+}
+
+.topLine {
+    @include mixins.flex-container(row, space-between, center);
+    width: 100%;
+}
+
+.content {
+    @include mixins.flex-container(column, center, flex-start);
+    width: 100%;
+    background: lightblue;
+}
