@@ -1,5 +1,5 @@
 import style from "./Balance.module.scss";
-import EmeraldIcon from "../../assets/emerald.svg";
+import EmeraldIcon from "../../assets/icons/emerald.svg";
 
 import { balanceData } from "../../assets/data"; // This import is only for demonstration.
 

@@ -1,5 +1,5 @@
 import style from "./Topbar.module.scss";
-import ReactIcon from "../../assets/react.svg";
+import ReactIcon from "../../assets/icons/react.svg";
 import Balance from "./Balance";
 import Account from "./Account";
 

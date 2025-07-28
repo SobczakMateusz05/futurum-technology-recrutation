@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import style from "./Account.module.scss";
-import PersonIcon from "../../assets/person.svg";
-import SettingsIcon from "../../assets/settings.svg";
-import LogoutIcon from "../../assets/logout.svg";
+import PersonIcon from "../../assets/icons/person.svg";
+import ArrowIcon from "../../assets/icons/arrow.svg";
+import SettingsIcon from "../../assets/icons/settings.svg";
+import LogoutIcon from "../../assets/icons/logout.svg";
 
 import { userData } from "../../assets/data"; //This import is only for demonstration.
 
@@ -20,6 +21,7 @@ function Account() {
                 <p className={style.userName}> {userData.name}</p>
                 <p className={style.userType}>{userData.type}</p>
             </div>
+            <img src={ArrowIcon} alt="Arrow bottom icon" />
             <div className={style.popUpContainer}>
                 <Link to="/settings" className={style.option}>
                     <img
