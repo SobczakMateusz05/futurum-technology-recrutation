@@ -1,5 +1,9 @@
 function Members() {
-    return <div>Members</div>;
+    return (
+        <div className="placeholderClass">
+            There would be managment with members
+        </div>
+    );
 }
 
 export default Members;

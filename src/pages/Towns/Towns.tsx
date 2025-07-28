@@ -1,5 +1,9 @@
 function Towns() {
-    return <div>Towns</div>;
+    return (
+        <div className="placeholderClass">
+            There would be managment with towns
+        </div>
+    );
 }
 
 export default Towns;
