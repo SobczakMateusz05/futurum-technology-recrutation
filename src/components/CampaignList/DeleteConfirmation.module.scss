@@ -1,0 +1,71 @@
+@use "../../assets/styles/mixins" as mixins;
+@use "../../assets/styles/variables" as vars;
+
+.container {
+    @include mixins.flex-container(row, center, center);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+.notification {
+    @include mixins.flex-container(column, center, center);
+    gap: vars.$spc-25;
+    background: vars.$clr-bg-secondary;
+    border-radius: vars.$spc-15;
+    padding: vars.$spc-15;
+    box-shadow: vars.$eff-shadow-primary;
+}
+
+.text {
+    @include mixins.h5-font;
+}
+
+.buttonContainer {
+    @include mixins.flex-container(row, space-between, center);
+    gap: vars.$spc-25;
+}
+
+.deleteButton,
+.cancelButton {
+    @include mixins.flex-container(row, center, center);
+    gap: vars.$spc-10;
+    @include mixins.p-font;
+    padding: vars.$spc-10 vars.$spc-20;
+    background: none;
+    border: none;
+    border-radius: vars.$spc-15;
+    box-shadow: vars.$eff-shadow-primary;
+    color: vars.$clr-txt-primary;
+    cursor: pointer;
+    transition: vars.$eff-transition;
+
+    &:hover {
+        color: red;
+        & > .icon {
+            fill: red;
+        }
+    }
+}
+
+.cancelButton {
+    &:hover {
+        color: vars.$clr-accent;
+
+        & > .icon {
+            fill: vars.$clr-accent;
+        }
+    }
+}
+
+.icon {
+    fill: vars.$clr-txt-primary;
+    width: 15px;
+    height: 15px;
+    transition: vars.$eff-transition;
+}
