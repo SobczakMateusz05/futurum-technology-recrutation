@@ -13,4 +13,5 @@
     box-shadow: vars.$eff-shadow-primary;
     padding: vars.$spc-10 vars.$spc-15;
     z-index: 1;
+    box-sizing: content-box;
 }
