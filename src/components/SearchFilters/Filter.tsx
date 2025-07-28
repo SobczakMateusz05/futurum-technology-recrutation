@@ -1,19 +1,18 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import style from "./Filter.module.scss";
 import type { FilterType } from "../../assets/types/SearchFilters";
-import DropdownOption from "./DropdownOption";
+import Dropdown from "./Dropdown";
+import useClickOutside from "../../assets/hooks/useClickOutside";
 
 import { FilterIcon, ArrowIcon } from "../../assets/ComponentIcons";
 
 function Filter() {
     const [searchParams, setSearchParams] = useSearchParams();
     const filterTypes: FilterType[] = ["all", "active", "inactive"];
-    const [activeFilterType, setActiveFilterType] = useState<FilterType>(
-        searchParams.get("filter")
-            ? (searchParams.get("filter") as FilterType)
-            : filterTypes[0]
-    );
+    const activeFilterType = searchParams.get("filter")
+        ? (searchParams.get("filter") as FilterType)
+        : filterTypes[0];
     const [isOpen, setIsOpen] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
 
@@ -25,30 +24,12 @@ function Filter() {
         }
 
         setSearchParams(searchParams);
-        setActiveFilterType(type);
         setIsOpen(false);
     };
 
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (
-                containerRef.current &&
-                !containerRef.current.contains(event.target as Node)
-            ) {
-                setIsOpen(false);
-            }
-        };
-
-        const controler = new AbortController();
-
-        window.addEventListener("click", handleClickOutside, {
-            signal: controler.signal,
-        });
-
-        return () => {
-            controler.abort();
-        };
-    }, []);
+    useClickOutside(containerRef, () => {
+        setIsOpen(false);
+    });
 
     return (
         <div ref={containerRef} className={style.container}>
@@ -62,17 +43,12 @@ function Filter() {
                 <ArrowIcon className={style.arrowIcon} />
             </button>
             {isOpen && (
-                <div className={style.dropdown}>
-                    {filterTypes.map((type) =>
-                        type !== activeFilterType ? (
-                            <DropdownOption
-                                key={type}
-                                label={type}
-                                onClick={() => handleFilter(type)}
-                            />
-                        ) : null
-                    )}
-                </div>
+                <Dropdown
+                    types={filterTypes}
+                    activeType={activeFilterType}
+                    onClick={handleFilter}
+                    subLabel="Campaign"
+                />
             )}
         </div>
     );

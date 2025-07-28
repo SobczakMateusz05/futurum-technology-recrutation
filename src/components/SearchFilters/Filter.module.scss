@@ -41,17 +41,3 @@
     @include mixins.p-font;
     color: vars.$clr-txt-primary;
 }
-
-.dropdown {
-    @include mixins.flex-container(column, flex-start, flex-start);
-    gap: vars.$spc-10;
-    position: absolute;
-    top: 105%;
-    left: 0;
-    width: 100%;
-    background: vars.$clr-bg-secondary;
-    border-radius: vars.$spc-15;
-    box-shadow: vars.$eff-shadow-primary;
-    padding: vars.$spc-10 vars.$spc-15;
-    z-index: 1;
-}
