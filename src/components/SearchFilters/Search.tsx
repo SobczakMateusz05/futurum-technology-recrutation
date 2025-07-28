@@ -26,7 +26,7 @@ function Search() {
                 <img src={SearchIcon} alt="Peel icon" className={style.icon} />
             </label>
             <input
-                type="text"
+                type="search"
                 id="search"
                 className={style.input}
                 value={searchValue}
