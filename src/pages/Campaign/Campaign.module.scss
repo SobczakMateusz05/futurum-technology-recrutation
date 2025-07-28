@@ -11,14 +11,14 @@
 .topLine {
     @include mixins.flex-container(row, space-between, center);
     width: 100%;
+    gap: vars.$spc-15;
 }
 
 .content {
     @include mixins.flex-container(column, center, flex-start);
+    gap: vars.$spc-15;
     width: 100%;
-    max-width: 100%;
     background: vars.$clr-bg-secondary;
-    box-shadow: vars.$clr-bg-secondary;
+    box-shadow: vars.$eff-shadow-primary;
     border-radius: vars.$spc-15;
-    padding: vars.$spc-15;
 }
