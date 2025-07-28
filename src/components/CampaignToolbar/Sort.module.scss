@@ -1,0 +1,33 @@
+@use "../../assets/styles/mixins" as mixins;
+@use "../../assets/styles/variables" as vars;
+
+.container {
+    @include mixins.flex-container(row, flex-start, center);
+    gap: 5px;
+}
+
+.dropdownContainer {
+    position: relative;
+}
+
+.text,
+.sortWay {
+    @include mixins.p-font;
+    color: vars.$clr-txt-primary;
+}
+
+.sortWay {
+    @include mixins.flex-container(row, flex-start, center);
+    gap: 5px;
+    padding: 5px;
+    color: vars.$clr-accent;
+    font-weight: 600;
+    border-radius: vars.$spc-15;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: vars.$eff-shadow-primary;
+    }
+}
