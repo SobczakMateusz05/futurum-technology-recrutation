@@ -1,0 +1,57 @@
+@use "../../assets/styles/mixins" as mixins;
+@use "../../assets/styles/variables" as vars;
+
+.container {
+    position: relative;
+}
+
+.button {
+    @include mixins.flex-container(row, flex-start, center);
+    gap: 5px;
+    background: vars.$clr-bg-secondary;
+    border: none;
+    border-radius: vars.$spc-15;
+    box-shadow: vars.$eff-shadow-primary;
+    padding: vars.$spc-10 vars.$spc-15;
+    cursor: pointer;
+    transition: vars.$eff-transition;
+
+    &:hover {
+        & > .filterIcon,
+        .arrowIcon {
+            fill: vars.$clr-accent;
+        }
+        & > .text {
+            color: vars.$clr-accent;
+        }
+    }
+}
+
+.filterIcon {
+    width: vars.$spc-15;
+    height: vars.$spc-15;
+}
+
+.filterIcon,
+.arrowIcon {
+    fill: vars.$clr-txt-primary;
+}
+
+.text {
+    @include mixins.p-font;
+    color: vars.$clr-txt-primary;
+}
+
+.dropdown {
+    @include mixins.flex-container(column, flex-start, flex-start);
+    gap: vars.$spc-10;
+    position: absolute;
+    top: 105%;
+    left: 0;
+    width: 100%;
+    background: vars.$clr-bg-secondary;
+    border-radius: vars.$spc-15;
+    box-shadow: vars.$eff-shadow-primary;
+    padding: vars.$spc-10 vars.$spc-15;
+    z-index: 1;
+}
