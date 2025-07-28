@@ -3,7 +3,7 @@
 
 .container {
     @include mixins.flex-container(row, center, center);
-    gap: 15px;
+    gap: vars.$spc-15;
     cursor: pointer;
     position: relative;
     -webkit-tap-highlight-color: transparent;
@@ -43,12 +43,12 @@
 
 .popUpContainer {
     @include mixins.flex-container(column, center, flex-start);
-    gap: 10px;
+    gap: vars.$spc-10;
     position: absolute;
     top: 101%;
-    padding: 10px 15px;
+    padding: vars.$spc-10 vars.$spc-15;
     background: vars.$clr-bg-secondary;
-    border-radius: 15px;
+    border-radius: vars.$spc-15;
     box-shadow: vars.$eff-shadow-primary;
     opacity: 0;
     pointer-events: none;
@@ -66,7 +66,7 @@
 
 .option {
     @include mixins.flex-container(row, center, center);
-    gap: 10px;
+    gap: vars.$spc-10;
     @include mixins.p-font;
     color: vars.$clr-txt-primary;
     cursor: pointer;

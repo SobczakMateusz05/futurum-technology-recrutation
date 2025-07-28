@@ -3,7 +3,7 @@
 
 .container {
     @include mixins.flex-container(row, space-between, center);
-    padding: 25px;
+    padding: vars.$spc-25;
 }
 
 .icon {
@@ -13,7 +13,7 @@
 
 .rightSideContainer {
     @include mixins.flex-container(row, center, stretch);
-    gap: 20px;
+    gap: vars.$spc-20;
 }
 
 .breakLine {
