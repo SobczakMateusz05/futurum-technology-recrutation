@@ -6,6 +6,7 @@
     width: 10%;
     padding: 0 vars.$spc-25;
     min-width: 152px;
+    box-sizing: content-box;
 }
 
 .nav {
