@@ -1,0 +1,18 @@
+@use "../../assets/styles/mixins" as mixins;
+@use "../../assets/styles/variables" as vars;
+
+.container {
+    @include mixins.flex-container(row, space-between, center);
+    width: 100%;
+}
+
+.left {
+    @include mixins.flex-container(row, center, center);
+    gap: vars.$spc-25;
+}
+
+.amount {
+    @include mixins.h5-font;
+    color: vars.$clr-txt-primary;
+    font-weight: 700;
+}
