@@ -1,0 +1,31 @@
+@use "../../assets/styles/mixins" as mixins;
+@use "../../assets/styles/variables" as vars;
+
+.container {
+    @include mixins.flex-container(row, flex-start, center);
+    gap: vars.$spc-10;
+    border-radius: vars.$spc-15;
+    box-shadow: vars.$eff-shadow-primary;
+    background: vars.$clr-bg-secondary;
+    padding: vars.$spc-10 vars.$spc-15;
+}
+
+.icon {
+    fill: vars.$clr-bg-secondary;
+    height: vars.$spc-15;
+    width: vars.$spc-15;
+}
+
+.input {
+    @include mixins.p-font;
+    border: none;
+    color: vars.$clr-txt-primary;
+
+    &::-webkit-input-placeholder {
+        color: vars.$clr-txt-secondary;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
