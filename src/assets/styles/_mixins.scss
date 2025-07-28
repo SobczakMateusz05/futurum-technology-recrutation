@@ -32,3 +32,17 @@
     letter-spacing: 0.063rem;
     font-family: "Outfit", sans-serif;
 }
+
+@mixin sm-font {
+    font-size: 0.875rem;
+    line-height: normal;
+    letter-spacing: 0.063rem;
+    font-family: "Outfit", sans-serif;
+}
+
+@mixin ssm-font {
+    font-size: 0.75rem;
+    line-height: normal;
+    letter-spacing: 0.063rem;
+    font-family: "Outfit", sans-serif;
+}
