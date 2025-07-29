@@ -18,3 +18,17 @@
     color: vars.$clr-txt-primary;
     font-weight: 700;
 }
+
+.button {
+    @include mixins.flex-container(row, center, center);
+    background: vars.$clr-accent;
+    border: none;
+    padding: vars.$spc-5;
+    border-radius: vars.$spc-5;
+    cursor: pointer;
+    transition: vars.$eff-transition;
+
+    &:hover {
+        background: vars.$clr-accent-hover;
+    }
+}
