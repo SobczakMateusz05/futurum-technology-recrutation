@@ -1,0 +1,53 @@
+@use "../../../assets/styles/mixins" as mixins;
+@use "../../../assets/styles/variables" as vars;
+
+.container {
+    @include mixins.flex-container(column, flex-start, flex-start);
+    gap: vars.$spc-15;
+    padding: vars.$spc-25;
+    border-radius: vars.$spc-15;
+    background: vars.$clr-bg-secondary;
+    box-shadow: vars.$eff-shadow-primary;
+}
+
+.closeButton,
+.editButton {
+    @include mixins.flex-container(row, center, center);
+    @include mixins.p-font;
+    gap: vars.$spc-5;
+    border: none;
+    background: none;
+    box-shadow: vars.$eff-shadow-primary;
+    border-radius: 5px;
+    color: vars.$clr-txt-primary;
+    cursor: pointer;
+    padding: vars.$spc-10 vars.$spc-15;
+    align-self: center;
+    transition: vars.$eff-transition;
+
+    &:hover {
+        color: vars.$clr-accent;
+
+        & > .icon {
+            fill: vars.$clr-accent;
+        }
+    }
+}
+
+.closeButton {
+    padding: vars.$spc-10;
+    align-self: flex-end;
+
+    &:hover {
+        & > .icon {
+            fill: red;
+        }
+    }
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    fill: vars.$clr-txt-primary;
+    transition: vars.$eff-transition;
+}

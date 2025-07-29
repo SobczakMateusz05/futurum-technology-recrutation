@@ -1,19 +1,7 @@
-@use "../../assets/styles/mixins" as mixins;
-@use "../../assets/styles/variables" as vars;
+@use "../../../assets/styles/mixins" as mixins;
+@use "../../../assets/styles/variables" as vars;
 
 .container {
-    @include mixins.flex-container(row, center, center);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    z-index: 1;
-}
-
-.notification {
     @include mixins.flex-container(column, center, center);
     gap: vars.$spc-25;
     background: vars.$clr-bg-secondary;
@@ -65,7 +53,7 @@
 
 .icon {
     fill: vars.$clr-txt-primary;
-    width: 15px;
-    height: 15px;
+    width: vars.$spc-15;
+    height: vars.$spc-15;
     transition: vars.$eff-transition;
 }

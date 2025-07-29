@@ -1,0 +1,17 @@
+@use "../../../assets/styles/mixins" as mixins;
+@use "../../../assets/styles/variables" as vars;
+
+.container {
+    @include mixins.flex-container(column, flex-start, flex-start);
+}
+
+.label {
+    @include mixins.sm-font;
+    color: vars.$clr-txt-secondary;
+}
+
+.text {
+    @include mixins.p-font;
+    color: vars.$clr-txt-primary;
+    white-space: wrap;
+}

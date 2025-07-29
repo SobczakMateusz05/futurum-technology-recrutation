@@ -1,0 +1,41 @@
+@use "../../assets/styles/mixins" as mixins;
+@use "../../assets/styles/variables" as vars;
+
+.container {
+    @include mixins.flex-container(column, flex-start, flex-start);
+}
+
+.label {
+    @include mixins.sm-font;
+    color: vars.$clr-txt-secondary;
+}
+
+.input {
+    @include mixins.p-font;
+    padding: vars.$spc-5;
+    color: vars.$clr-txt-primary;
+    border: none;
+    border-bottom: 1px solid vars.$clr-txt-primary;
+    background: none;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    &:focus {
+        outline: none;
+        border-bottom: 1px solid vars.$clr-txt-secondary;
+    }
+}
+
+.select {
+    @include mixins.p-font;
+    margin-top: vars.$spc-5;
+    background: none;
+    border: none;
+    border-bottom: 1px solid vars.$clr-txt-primary;
+
+    &:focus {
+        outline: none;
+    }
+}
