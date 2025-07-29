@@ -6,7 +6,6 @@
     gap: vars.$spc-15;
     cursor: pointer;
     position: relative;
-    -webkit-tap-highlight-color: transparent;
 
     &:hover .popUpContainer {
         opacity: 1;

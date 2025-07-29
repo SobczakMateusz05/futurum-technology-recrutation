@@ -7,7 +7,7 @@
 
 .button {
     @include mixins.flex-container(row, flex-start, center);
-    gap: 5px;
+    gap: vars.$spc-5;
     background: vars.$clr-bg-secondary;
     border: none;
     border-radius: vars.$spc-15;
