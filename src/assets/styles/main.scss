@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html,
@@ -32,6 +33,23 @@ a.active {
 
     & .navIcon {
         fill: vars.$clr-accent;
+    }
+}
+
+.react-select__control {
+    @include mixins.sm-font;
+    border-color: vars.$clr-txt-primary !important;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    background: none !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+    &:hover,
+    &:focus {
+        outline: none !important;
+        border-color: vars.$clr-txt-secondary !important;
+        box-shadow: none !important;
     }
 }
 
