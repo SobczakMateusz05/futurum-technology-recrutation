@@ -17,14 +17,24 @@
     font-weight: 400;
     color: vars.$clr-txt-accent;
     text-align: start;
-    padding: 5px;
+    padding: vars.$spc-5;
 }
 
 .rowContainer {
     border-bottom: 1px solid vars.$clr-bg-accent;
+    cursor: pointer;
+    transition: vars.$eff-transition;
 
     &:last-child {
         border-bottom: none;
+    }
+
+    &:hover {
+        background: vars.$clr-bg-accent;
+
+        &:has(.button:hover) {
+            background: none;
+        }
     }
 }
 
@@ -33,7 +43,7 @@
     font-weight: 400;
     color: vars.$clr-txt-primary;
     text-align: start;
-    padding: 15px 5px;
+    padding: vars.$spc-15 vars.$spc-5;
     max-height: 70px;
     max-width: 150px;
 }
