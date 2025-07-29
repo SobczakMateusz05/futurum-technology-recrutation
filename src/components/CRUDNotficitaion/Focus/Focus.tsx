@@ -1,6 +1,6 @@
 import style from "./Focus.module.scss";
 import FocusField from "./FocusField";
-import type { FocusProps } from "../../../assets/types/CampaignList";
+import type { FocusProps } from "../../../assets/types/CRUDNotification";
 import { EditIcon, CrossIcon } from "../../../assets/ComponentIcons";
 
 function Focus({ data, edit, close }: FocusProps) {

@@ -3,7 +3,7 @@ import style from "./CRUDNotification.module.scss";
 import Focus from "./Focus/Focus";
 import DeleteConfirmation from "./Delete/DeleteConfirmation";
 import CampaignForm from "../CampaignForm/CampaignForm";
-import type { campaignDataType } from "../../assets/types/CampaignList";
+import type { campaignDataType } from "../../assets/types/CRUDNotification";
 
 import { campaignData } from "../../assets/data"; //This import is only for demonstration.
 

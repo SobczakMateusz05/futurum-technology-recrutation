@@ -1,5 +1,5 @@
 import style from "./FocusField.module.scss";
-import type { FocusFieldProps } from "../../../assets/types/CampaignList";
+import type { FocusFieldProps } from "../../../assets/types/CRUDNotification";
 
 function Focus({ label, text, type }: FocusFieldProps) {
     const editedText = () => {
