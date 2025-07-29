@@ -2,12 +2,19 @@ import style from "./FormField.module.scss";
 import type { FormFieldProps } from "../../assets/types/CampaignForm";
 import { townData } from "../../assets/data";
 
-function FormField({ type, name, value, onChange }: FormFieldProps) {
+function FormField({
+    type,
+    name,
+    value,
+    onChange,
+    isValidate,
+}: FormFieldProps) {
     return (
         <div className={style.container}>
             <label
                 htmlFor={type !== "typehead" ? name : undefined}
                 className={style.label}
+                style={!isValidate ? { color: "red" } : undefined}
             >
                 {name
                     .replace(/([A-Z])/g, " $1")

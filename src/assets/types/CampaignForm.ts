@@ -16,4 +16,5 @@ export type FormFieldProps = {
     onChange: (
         e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
     ) => void;
+    isValidate: boolean;
 };

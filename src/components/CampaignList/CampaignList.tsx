@@ -26,6 +26,8 @@ function CampaignList() {
         setSearchParams(searchParams);
     };
 
+    // This file would have catching sort and fiter and sort, filter and search list but I didn't have time to fisnish this part
+
     return (
         <table className={style.container}>
             <thead>
