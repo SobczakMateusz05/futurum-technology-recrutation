@@ -1,4 +1,5 @@
 import style from "./Campaign.module.scss";
+import CRUDNotification from "../../components/CRUDNotficitaion/CRUDNotification";
 import Filter from "../../components/SearchFilters/Filter";
 import Search from "../../components/SearchFilters/Search";
 import CampaignToolbar from "../../components/CampaignToolbar/CampaignToolbar";
@@ -16,6 +17,7 @@ function Campaign() {
 
     return (
         <div className={style.container}>
+            <CRUDNotification />
             <div className={style.topLine} style={styles}>
                 <Filter />
                 <Search />
