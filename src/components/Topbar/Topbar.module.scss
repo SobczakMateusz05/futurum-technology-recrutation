@@ -12,12 +12,29 @@
     height: 50px;
 }
 
-.rightSideContainer {
+.rightSideContainer,
+.leftSideContainer {
     @include mixins.flex-container(row, center, stretch);
     gap: vars.$spc-20;
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+        gap: vars.$spc-10;
+    }
 }
 
 .breakLine {
     width: 1px;
     background: vars.$clr-txt-secondary;
+}
+
+.menuButton {
+    @include mixins.h5-font;
+    background: vars.$clr-bg-secondary;
+    border: none;
+    box-shadow: vars.$eff-shadow-primary;
+    color: vars.$clr-txt-primary;
+    padding: vars.$spc-10;
+    border-radius: vars.$spc-15;
+    transition: vars.$eff-transition;
 }

@@ -7,6 +7,19 @@
     padding: 0 vars.$spc-25;
     min-width: 152px;
     box-sizing: content-box;
+
+    @media (max-width: 767px) {
+        position: fixed;
+        background: vars.$clr-bg-secondary;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        box-shadow: vars.$eff-shadow-primary;
+        left: -100%;
+        transition: vars.$eff-transition;
+        align-items: center;
+        gap: 50px;
+    }
 }
 
 .nav {
@@ -18,4 +31,23 @@
     gap: vars.$spc-10;
     list-style: none;
     width: 100%;
+}
+
+.open {
+    left: 0;
+}
+
+.closeButton {
+    @include mixins.flex-container(row, center, center);
+    background: none;
+    border: none;
+    box-shadow: vars.$eff-shadow-primary;
+    padding: vars.$spc-10;
+    border-radius: vars.$spc-15;
+}
+
+.crossIcon {
+    width: vars.$spc-25;
+    height: vars.$spc-25;
+    fill: vars.$clr-txt-primary;
 }

@@ -3,14 +3,22 @@
 
 .container {
     @include mixins.flex-container(row, space-between, center);
+    gap: vars.$spc-10;
     width: 100%;
     padding: vars.$spc-15;
     padding-bottom: 0;
+
+    @media (max-width: 767px) {
+        @include mixins.flex-container(column, space-between, flex-start);
+    }
 }
 
 .left {
     @include mixins.flex-container(row, center, center);
     gap: vars.$spc-25;
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
 }
 
 .amount {
@@ -30,5 +38,9 @@
 
     &:hover {
         background: vars.$clr-accent-hover;
+    }
+
+    @media (max-width: 767px) {
+        align-self: center;
     }
 }
